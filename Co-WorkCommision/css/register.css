@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=SUSE:wght@100..800&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito", sans-serif;
+    background: linear-gradient(180deg, #67668b, #141a2f);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+}
+
+.logo-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.logo-text {
+    font-style: italic;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.work {
+    color: white;
+}
+
+.us {
+    color: #ffbf00;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.form-container {
+    display: none; 
+    background: linear-gradient(180deg, #2a294390, #4751747f);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    animation: fadeIn 0.5s ease forwards;
+    width: 300px; /* Definindo uma largura fixa para o formulário */
+    text-align: center; /* Centralizando o conteúdo */
+    margin: 20px auto; /* Centralizando o formulário na página */
+}
+
+.form-container h2 {
+    font-family: "Nunito", sans-serif;
+    font-size: 30px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+    border: none;
+    background-color: #2C2541; 
+    color: #8F8CA7;
+    font-family: "Nunito", sans-serif;
+    font-weight: 500;
+    width: calc(100% - 20px); 
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 5px;
+    font-size: 1rem;
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.btn {
+    background-color: #726b94;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1.2rem; /* Ajuste o tamanho do botão conforme necessário */
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px; /* Espaçamento entre o botão e o campo de senha */
+    width: 100%; /* Botão ocupa toda a largura */
+}
+
+.btn:hover {
+    background-color: #5c527c;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: white;
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,738 @@
+/*  Código fonte CSS */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=SUSE:wght@100..800&display=swap');
+
+body {
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold; 
+    background-color: #25253C; 
+    color: #FFF;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px;
+    background-color: #45456A;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo img {
+    position: absolute;
+    left: 70px;
+    top: 10;
+    height: 100px;
+    z-index: -1; 
+}
+
+.logo .text-container {
+    position: relative;
+    z-index: 1;
+}
+
+.work, .us {
+    font-size: 40px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.work {
+    color: white;
+}
+
+.us {
+    color: rgb(255, 202, 8);
+}
+
+.search-bar {
+    position: relative;
+    width: 100%;
+    left: 50px; 
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    width: 50%;
+    padding: 15px 40px 10px 40px;
+    border: none;
+    outline: none;
+    background-color: #2C2541;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: "Nunito", sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    border-radius: 10px;
+}
+
+.search-icon {
+    position: absolute;
+    left: -10px;
+    font-size: 32px;
+    padding: 6px; 
+    color: #413A5A; 
+    background-color: #9598c6;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+nav {
+    font-family: "Nunito", sans-serif;
+    font-style: italic;
+    font-weight: 100px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    margin: 0 20px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: #FFD700; 
+}
+
+.account-icon {
+    margin-left: 20px;
+}
+
+.account-icon a {
+    color: #fff; 
+    text-decoration: none;
+    font-size: 40px;
+}
+
+.account-icon a:hover {
+    color: #FFD700;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.image-card {
+    position: relative;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.image-card img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.image-card:hover img {
+    transform: scale(1.05);
+}
+
+
+.carousel {
+    position: relative;
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-inner {
+    display: flex;
+    width: 300%; 
+    animation: scroll 30s linear infinite;
+    transition: transform 0.5s ease; 
+}
+
+.carousel-inner.paused {
+    animation: none;
+}
+
+.carousel-item {
+    width: 33.33%; 
+    box-sizing: border-box;
+    flex-shrink: 0; 
+    position: relative; 
+}
+
+.carousel-item img {
+    width: 100%;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    text-align: center;
+}
+
+.text {
+    max-width: 90%; 
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-66.66%); 
+    }
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.overlay .text {
+    color: #FFF;
+    font-size: 20px;
+}
+
+.overlay h2 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.overlay p {
+    font-family: "Nunito", sans-serif;
+    margin: 10px 0 0;
+    font-size: 20px;
+    font-weight: 500;
+    color: #FFD700;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.filters button {
+    font-family: "Nunito", sans-serif;
+    background-color: #57517c;
+    border: none;
+    color: #ddd8ee;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.filters button:hover {
+    background-color: #514E73;
+}
+
+.lista-projetos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.project-card {
+    background-color: #3E3A5A;
+    border-radius: 10px;
+    width: 250px;
+    padding: 20px;
+    position: relative;
+    text-align: left;
+}
+
+
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.project-details {
+    margin-top: 10px;
+}
+
+.project-details h3 {
+    font-style: italic;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.project-details strong {
+    font-size: 15px;
+    color: rgb(255, 197, 8);
+
+}
+
+.project-details p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+}
+
+.details-btn {
+    background-color: #ffd000;
+    border: none;
+    color: #29284B;
+    border-radius: 30%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.details-btn i {
+    color: #29284B;
+}
+
+.details-btn:hover {
+    background-color: #F0E68C;
+}
+
+/* responsividade  */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .logo {
+        padding: 0;
+        margin-bottom: 10px;
+    }
+
+    .logo img {
+        position: relative;
+        left: 0;
+        top: 0;
+        height: 60px; 
+        z-index: 0;
+    }
+
+    .work, .us {
+        font-size: 30px;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin: 15px 0;
+        left: 0;
+        padding: 0 15px; 
+    }
+
+    .search-bar input {
+        width: 100%; 
+        padding: 10px 15px;
+    }
+
+    nav {
+        margin-top: 15px;
+    }
+
+    nav a {
+        margin: 0 10px;
+        font-size: 16px; 
+    }
+
+    .account-icon {
+        margin-top: 10px;
+    }
+
+
+    .carousel {
+        width: 100%; 
+        max-width: none;
+        border-radius: 0; 
+    }
+
+    .carousel-item {
+        width: 100%; 
+    }
+
+    .overlay {
+        padding: 15px; 
+    }
+
+    .overlay h2 {
+        font-size: 24px; 
+    }
+
+    .overlay p {
+        font-size: 16px;
+    }
+
+ 
+    .lista-projetos {
+        flex-direction: column; 
+        align-items: center; 
+        padding: 10px; 
+    }
+
+    .project-card {
+        width: 90%; 
+        margin-bottom: 20px; 
+    }
+
+    .details-btn {
+        bottom: 10px; 
+        right: 10px; 
+    }
+
+    .filters {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .filters button {
+        margin: 5px 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .work, .us {
+        font-size: 24px; 
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .search-bar input {
+        padding: 8px 10px; 
+    }
+
+    .account-icon a {
+        font-size: 32px; 
+    }
+
+    .overlay h2 {
+        font-size: 20px;
+    }
+
+    .overlay p {
+        font-size: 14px; 
+    }
+
+    .details-btn {
+        width: 40px; 
+        height: 40px; 
+    }
+
+    .details-btn i {
+        font-size: 18px; 
+    }
+}
+
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    background-color: #2C2541;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    gap: 40px;
+}
+
+.profile-title {
+    color: #FFD700;
+    font-family: "Nunito", sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #FFD700;
+    margin-bottom: 10px;
+}
+
+ 
+.change-photo-btn {
+    background-color: #57517c;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.change-photo-btn:hover {
+    background-color: #514E73;
+}
+
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start; /
+}
+.profile-name {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+    outline: none;
+    background-color: #3E3A5A;
+    color: #FFFFFF;
+    font-family: "Nunito", sans-serif;
+    width: 250px; 
+}
+
+.profile-name, ::placeholder {
+ color: white;
+}
+
+.profile-info, h1{
+    font-size: 25px;
+    padding-top: -15px;
+}
+
+
+.profile-dropdown {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+    outline: none;
+    background-color: #3E3A5A;
+    color: #FFFFFF;
+    appearance: none;
+    -webkit-appearance: none;
+    font-family: "Nunito", sans-serif;
+    cursor: pointer;
+    width: 250px; 
+}
+
+
+.save-changes-btn {
+    background-color: #FFD700;
+    color: #29284B;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+    margin-bottom: 10px; 
+}
+
+.save-changes-btn:hover {
+    background-color: #F0E68C;
+}
+
+
+.settings-btn {
+    background-color: #FFD700;
+    color: #29284B;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+}
+
+.settings-btn:hover {
+    background-color: #F0E68C;
+}
+
+
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    background-color: #2C2A4A;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.profile-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.profile-header img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+.profile-header h1 {
+    margin: 0;
+}
+.profile-header .stars {
+    display: flex;
+    margin-left: auto;
+}
+.profile-header .stars i {
+    size: 30px;
+    color: #5e5183;
+    margin-left: 5px;
+}
+.profile-header .stars i.filled {
+    color: #7875af;
+    size: 30px;
+}
+h2 {
+    color: #DDD;
+}
+.profile-section {
+    margin-top: 20px;
+}
+.profile-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+.profile-section ul li {
+    margin-bottom: 10px;
+}
+.icons {
+    display: flex;
+    margin-top: 20px;
+}
+.icons a {
+    color: white;
+    font-size: 50px;
+    margin-right: 20px;
+}
+
+
+footer {
+    background-color: #2E2D4F; /* Cor similar à predominante no header */
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 20px;
+  }
+  
+  .footer-section h3 {
+    color: #FFC107;
+    margin-bottom: 20px;
+  }
+  
+  .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #FFC107;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .social-icons li {
+    list-style: none;
+  }
+  
+  .social-icons li a {
+    font-size: 24px;
+    color: #fff;
+    transition: color 0.3s;
+  }
+  
+  .social-icons li a:hover {
+    color: #FFC107;
+  }
+  
+  .footer-bottom {
+    background-color: #1C1C2B;
+    padding: 20px 0;
+    margin-top: 20px;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+    color: #fff;
+  }
+  
